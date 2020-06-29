@@ -19,12 +19,12 @@ After cloning the repository use
 ```
 bundle install
 ```
- commands in console.
-
-If you want to run a server, use:
+command in console.
+ 
+Before launching the app, make sure that RabbitMQ is running. Run this command in another terminal, depending of the path where RabbitMQ is installed on your machine:
 
 ```
-rails s
+rabbitmq-server
 ```
 
 To run microservice takeoff_processing.rb, run in another terminal:
@@ -32,4 +32,10 @@ To run microservice takeoff_processing.rb, run in another terminal:
 ```
 ruby takeoff_processing.rb
 
+```
+
+Then you are ready to launch the main airport app, using the command:
+
+```
+rails s
 ```
