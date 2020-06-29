@@ -39,3 +39,9 @@ Then you are ready to launch the main airport app, using the command:
 ```
 rails s
 ```
+
+The main functionality has the following address (if you run locally on your machine):
+
+```
+http://localhost:3000/airports 
+```
