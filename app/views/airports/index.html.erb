@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<%= form_with(url: airports_prepare_planes_path, method: "get", local: true) do %>
+  <%= label_tag(:number, "Number of planes:") %>
+  <%= text_field_tag(:number) %>
+  <%= submit_tag("Ok") %>
+<% end %>
+
+</body>
+</html>

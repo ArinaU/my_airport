@@ -1,0 +1,13 @@
+
+<%= form_for @airport, remote: true do |f| %>
+  Planes:
+  <ul>
+    <%= f.fields_for :planes do |form| %>
+      <li>
+        <%= form.label :name, form.object.name %>
+        <%= form.hidden_field :status, value: "waiting" %>
+      </li>
+    <% end %>
+  </ul>
+  <%= f.submit 'Send' %>
+<% end %>

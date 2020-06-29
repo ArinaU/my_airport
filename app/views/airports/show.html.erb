@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $( document ).ready(setTimeout(function() {
+          statuses = document.getElementsByClassName('statuses');
+          for (var i = 0; i < statuses.length; ++i) {
+              if (statuses[i].textContent != "took off"){
+                  location.reload();
+              }
+          }
+          }, 3000)
+      );
+  </script>
+</head>
+<body>
+
+<% @airport.planes.each do |plane| %>
+<div style="display: inline-block; margin-right: 20px">
+  <div><%= plane.name %></div>
+  <div class="statuses"><%= plane.status %></div>
+</div>
+<% end %>
+
+<br>
+<br>
+
+<div>
+<%= button_to "Restart", airport_path, method: "delete" %>
+</div>
+
+</body>
+</html>
