@@ -41,7 +41,7 @@ class TakeoffServer
   end
 
   def processing(arg)
-    sleep Random.rand(15)
+    sleep Random.rand(10..15)
     "took off"
   end
 
